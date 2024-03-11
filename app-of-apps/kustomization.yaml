@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: unusual-mammal-go 
+  janus-idp.io/tekton: unusual-mammal-go
+  backstage.io/kubernetes-id: unusual-mammal-go
+  backstage.io/kubernetes-namespace: rhtap-integ 
+  app.kubernetes.io/part-of: unusual-mammal-go
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
